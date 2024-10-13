@@ -25,22 +25,4 @@ public class FnPropertyController {
     public List<FnProperty> getPropertiesByFemaNo(@RequestParam("fema_no") Double femaNo) {
         return fnPropertyService.getPropertiesByFemaNo(femaNo);
     }
-
-    @GetMapping("/taste-threshold")
-    public List<FnProperty> getPropertiesByTasteThreshold(@RequestParam("values") String values) {
-        return fnPropertyService.getPropertiesByTasteThreshold(values);
-    }
-
-    @GetMapping("/synthesis")
-    public List<FnProperty> getPropertiesBySynthesis(@RequestParam("values") String values) {
-        return fnPropertyService.getPropertiesBySynthesis(values);
-    }
-
-    @GetMapping("/food-category")
-    public List<FnProperty> getPropertiesByFoodCategory(@RequestParam("values") String values) {
-        return fnPropertyService.getPropertiesByFoodCategory(values);
-    }
-
-
-
 }
