@@ -9,7 +9,11 @@ public class Molecule {
 
     @Id
     private String id;
+
+    @Field("pubchem_id")
     private int pubchem_id;
+
+    @Field("iupac_name")
     private String iupac_name;
 
     @Field("common_name")
@@ -17,12 +21,26 @@ public class Molecule {
 
     @Field("functional_groups")
     private String functionalGroups;  // Correct naming convention (camelCase)
+
+    @Field("smile")
     private String smile;
+
+    @Field("molecular_weight")
     private double molecular_weight;
+
+    @Field("hbd_count")
     private int hbd_count;
+
+    @Field("hba_count")
     private int hba_count;
+
+    @Field("num_rotatablebonds")
     private int num_rotatablebonds;
+
+    @Field("complexity")
     private double complexity;
+
+    @Field("topological_polor_surfacearea")
     private double topological_polor_surfacearea;
 
     @Field("flavor_profile")
@@ -31,6 +49,55 @@ public class Molecule {
     @Field("fema_flavor_profile")
     private String femaFlavorProfile;
 
+    @Field("natural")
+    private int natural;
+
+    @Field("synthetic")
+    private int synthetic;
+
+    @Field("unknown_natural")
+    private int unknown_natural;
+
+    public int getNatural() {
+        return natural;
+    }
+
+    public void setNatural(int natural) {
+        this.natural = natural;
+    }
+
+    public int getSynthetic() {
+        return synthetic;
+    }
+
+    public void setSynthetic(int synthetic) {
+        this.synthetic = synthetic;
+    }
+
+    public int getUnknownNatural() {
+        return unknown_natural;
+    }
+
+    public void setUnknownNatural(int unknown_natural) {
+        this.unknown_natural = unknown_natural;
+    }
+
+    public String getFunctionalGroups() {
+        return functionalGroups;
+    }
+
+    public void setFunctionalGroups(String functionalGroups) {
+        this.functionalGroups = functionalGroups;
+    }
+
+    public String getFlavorProfile() {
+        return flavorProfile;
+    }
+
+    public void setFlavorProfile(String flavorProfile) {
+        this.flavorProfile = flavorProfile;
+    }
+
     public String getFemaFlavorProfile() {
         return femaFlavorProfile;
     }
@@ -38,10 +105,7 @@ public class Molecule {
     public void setFemaFlavorProfile(String femaFlavorProfile) {
         this.femaFlavorProfile = femaFlavorProfile;
     }
-// Add other fields as per the CSV if necessary
 
-    // Constructors, Getters, and Setters
-    public Molecule() {}
 
     public String getId() {
         return id;

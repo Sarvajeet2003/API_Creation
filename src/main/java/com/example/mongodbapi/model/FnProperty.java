@@ -100,6 +100,39 @@ public class FnProperty {
     @Field("Physical_chemical_characteristics")
     private String physicalChemicalCharacteristics;
 
+    @Field("Taste_threshold_values")
+    private String tasteThreshold;
+
+    @Field("Synthesis")
+    private String synthesis;
+
+    @Field("Food_Category_Usual_Max")
+    private String food_category;
+
+    public String getFood_category() {
+        return food_category;
+    }
+
+    public void setFood_category(String food_category) {
+        this.food_category = food_category;
+    }
+
+    public String getSynthesis() {
+        return synthesis;
+    }
+
+    public void setSynthesis(String synthesis) {
+        this.synthesis = synthesis;
+    }
+
+    public String getTasteThreshold() {
+        return tasteThreshold;
+    }
+
+    public void setTasteThreshold(String tasteThreshold) {
+        this.tasteThreshold = tasteThreshold;
+    }
+
     // Getters and Setters for all fields
 
     public String getId() {
