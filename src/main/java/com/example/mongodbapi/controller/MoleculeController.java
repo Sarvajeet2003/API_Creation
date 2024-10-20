@@ -3,6 +3,7 @@ package com.example.mongodbapi.controller;
 import com.example.mongodbapi.model.Molecule;
 import com.example.mongodbapi.service.MoleculeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -50,5 +51,30 @@ public class MoleculeController {
     @GetMapping("/by-heavyAtomCount")
     public List<Molecule> getMoleculesByHeavyAtomCount(@RequestParam("heavy_atom_count") int heavyAtomCount) {
         return moleculeService.getMoleculesByHeavyAtomCount(heavyAtomCount);
+    }
+    @GetMapping("/filter-by-weight-from")
+    public List<Molecule> getMoleculesByWeightFrom(@RequestParam double from) {
+        return moleculeService.findMoleculesByWeightFrom(from);
+    }
+
+    @GetMapping("/filter-by-weight-range")
+    public List<Molecule> getMoleculesByWeightRange(@RequestParam double from, @RequestParam double to) {
+        return moleculeService.findMoleculesByWeightRange(from, to);
+    }
+
+    @GetMapping("/filter-by-hbd-count")
+    public List<Molecule> filterByHbdCount(@RequestParam int hbdCount) {
+        return moleculeService.findByHbdCount(hbdCount);
+    }
+
+    @GetMapping("/filter-by-hba-count")
+    public List<Molecule> filterByHbaCount(@RequestParam int hbaCount) {
+        return moleculeService.findByHbaCount(hbaCount);
+    }
+
+    @GetMapping("/filter-by-type")
+    public ResponseEntity<List<Molecule>> getMoleculesByType(@RequestParam String type) {
+        List<Molecule> molecules = moleculeService.findByType(type);
+        return ResponseEntity.ok(molecules);
     }
 }

@@ -37,6 +37,9 @@ public class FnProperty {
     @Field("CoE_No")
     private String coeNo;
 
+    @Field("CoE")
+    private String coeApproval;
+
     @Field("EINECS_No")
     private String einecsNo;
 
@@ -100,47 +103,73 @@ public class FnProperty {
     @Field("Physical_chemical_characteristics")
     private String physicalChemicalCharacteristics;
 
-    @Field("Taste_threshold_values")
-    private String tasteThreshold;
+    @Field("Natural_occurrence")
+    private String naturalOccurrence;
 
-    @Field("Synthesis")
-    private String synthesis;
+    @Field("Trade_association_guidelines")
+    private String tradeAssociationGuidelines;
 
-    @Field("Food_Category_Usual_Max")
-    private String food_category;
+    @Field("Aroma_threshold_values")
+    private String aromaThresholdValues;
 
-    public String getFood_category() {
-        return food_category;
+    @Field("Description")
+    private String description;
+
+    @Field("IOFI")
+    private String iofiCategorisation;
+
+    public String getDescription() {
+        return description;
+    }
+    public String getIofiCategorisation() {
+        return iofiCategorisation;
     }
 
-    public void setFood_category(String food_category) {
-        this.food_category = food_category;
+    public void setIofiCategorisation(String iofiCategorisation) {
+        this.iofiCategorisation = iofiCategorisation;
     }
 
-    public String getSynthesis() {
-        return synthesis;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public void setSynthesis(String synthesis) {
-        this.synthesis = synthesis;
+    public String getCoeApproval() {
+        return coeApproval;
     }
 
-    public String getTasteThreshold() {
-        return tasteThreshold;
-    }
-
-    public void setTasteThreshold(String tasteThreshold) {
-        this.tasteThreshold = tasteThreshold;
+    public void setCoeApproval(String coeApproval) {
+        this.coeApproval = coeApproval;
     }
 
     // Getters and Setters for all fields
+    public String getTradeAssociationGuidelines() {
+        return tradeAssociationGuidelines;
+    }
+    public String getAromaThresholdValues() {
+        return aromaThresholdValues;
+    }
 
+    public void setAromaThresholdValues(String aromaThresholdValues) {
+        this.aromaThresholdValues = aromaThresholdValues;
+    }
+
+    public void setTradeAssociationGuidelines(String tradeAssociationGuidelines) {
+        this.tradeAssociationGuidelines = tradeAssociationGuidelines;
+    }
     public String getId() {
         return id;
     }
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getNaturalOccurrence() {
+        return naturalOccurrence;
+    }
+
+    public void setNaturalOccurrence(String naturalOccurrence) {
+        this.naturalOccurrence = naturalOccurrence;
     }
 
     public String getName() {
